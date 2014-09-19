@@ -2,6 +2,11 @@ package robot.control;
 
 import edu.wpi.first.wpilibj.Joystick;
 
+/**
+ * Class to simplify usage of the Joystick classes.
+ * 
+ * @author Shreyas
+ */
 public class XboxController {
     
     /** Horizontal axis on the left stick. */
@@ -18,6 +23,7 @@ public class XboxController {
     
     /** Vertical axis on the right stick. */
     public static final int RIGHT_Y = 5;
+    
     
     /** 'A' button. */
     public static final int A = 1;

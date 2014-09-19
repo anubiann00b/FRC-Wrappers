@@ -1,5 +1,10 @@
 package robot.drive;
 
+/**
+ * Abstraction over robot drivetrains.
+ * 
+ * @author Shreyas
+ */
 public abstract class RobotDrive {
     
     /**
