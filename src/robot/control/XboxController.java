@@ -1,15 +1,14 @@
 package robot.control;
 
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.Joystick.AxisType;
 
 public class XboxController {
     
-    public static final AxisType LEFT_X = AxisType.kY;
-    public static final AxisType LEFT_Y = AxisType.kZ;
-    public static final AxisType TRIGGERS = AxisType.kTwist;
-    public static final AxisType RIGHT_X = AxisType.kThrottle;
-    public static final AxisType RIGHT_Y = AxisType.kNumAxis;
+    public static final int LEFT_X = 1;
+    public static final int LEFT_Y = 2;
+    public static final int TRIGGERS = 3;
+    public static final int RIGHT_X = 4;
+    public static final int RIGHT_Y = 5;
     
     public static final int A = 1;
     public static final int B = 2;
@@ -28,8 +27,10 @@ public class XboxController {
         joystick = new Joystick(1);
     }
     
-    public double getAxis(AxisType axis) {
-        return joystick.getAxis(axis);
+    public double getAxis(int axis) {
+        if (axis<1 || axis>5)
+            return 0;
+        return joystick.getRawAxis(axis);
     }
     
     public boolean getButton(int button) {
